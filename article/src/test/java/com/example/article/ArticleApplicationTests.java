@@ -64,21 +64,21 @@ System.out.println(p);
 @Test
 public void testFindArticleByTitreLike()
 {
-List<Article> arts = articleRepository.findByTitreLike("c");   
+List<Article> arts = articleRepository.findByTitreLike("covid_19");   
 for (Article p : arts)
 
 System.out.println(p);
 }
 @Test
-public void findByTitreDate()
+public void testfindByTitreDescription()
 {
-List<Article> prods = articleRepository.findByTitreDate("covid_19","La pandémie de Covid-19 se développe en Tunisie officiellement depuis le 2 mars 2020");
+List<Article> prods = articleRepository.findByTitreDescription("covid_19","La pandémie de Covid-19 se développe en Tunisie officiellement depuis le 2 mars 2020");
 for (Article p : prods)
 {
 System.out.println(p);
 }
 }
-@Test
+/*@Test
 public void testfindByCategorie()
 {
 Categorie cat = new Categorie();
@@ -88,7 +88,7 @@ for (Article p : prods)
 {
 System.out.println(p);
 }
-}
+}*/
 @Test
 public void findByCategorieIdCat()
 {

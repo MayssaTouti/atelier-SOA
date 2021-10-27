@@ -12,15 +12,19 @@ public interface ArticleService {
 	Article saveArticle(Article p);
 	Article updateArticle(Article p);
 	void deleteArticle(Article p);
-	 void deleteArticleById(Long id);
-	 Article getArticle(Long id);
-	List<Article> getAllArticle();
+	void deleteArticleById(Long id);
+    List<Article> getAllArticle();
+    Article getArticle(Long id);
+    List<Article> testFindArticleByTitreLike(String titre);
+    List<Article>  findByTitre(String titre);
+    List<Article> trierArticleTitreDate();
+ 
+	List<Article> findByTitreDescription (String titre , String description );
+	List<Article> findByCategorie (Categorie categorie);
+	List<Article> findByCategorieIdCat(Long id);
+  //trier ascendante 
+	List<Article> findByOrderByTitreAsc();
 	
 	
-	
-	List<Article> findByTitre(String titre);
-	List<Article> testFindArticleByTitreLike(String titre);
-	
-
 
 }
